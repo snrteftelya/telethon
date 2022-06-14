@@ -12,7 +12,7 @@ client.start()
 @client.on(events.NewMessage(chats=('t.me/physicskapbot')))
 async def handler(event):
     if event.message.message == "Введите номер задания":
-        for i in range(765, 2000):
+        for i in range(842, 2000):
             await asyncio.sleep(1)
             await client.send_message('t.me/physicskapbot', f'{i}')
             await asyncio.sleep(7)
