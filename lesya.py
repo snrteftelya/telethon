@@ -15,12 +15,11 @@ async def handler(event):
         for i in range(765, 2000):
             await asyncio.sleep(1)
             await client.send_message('t.me/physicskapbot', f'{i}')
-            if event.message.message == f"Условие задания №{i}":
-                await asyncio.sleep(7)
-                message = await client.get_messages('t.me/physicskapbot')
-                await asyncio.sleep(1)
-                await message[0].click()
-                await asyncio.sleep(1)
-                i += 1
+            await asyncio.sleep(7)
+            message = await client.get_messages('t.me/physicskapbot')
+            await asyncio.sleep(1)
+            await message[0].click()
+            await asyncio.sleep(1)
+            i += 1
 
 client.run_until_disconnected()
